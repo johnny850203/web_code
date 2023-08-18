@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="../style/style.css" />
+    <title>旅遊規劃網</title>
+  </head>
+
+  <body>
+    <header>
+      <section class="logo">
+        <img
+          src="../images/undraw_travelers_re_y25a.svg"
+          alt="旅遊規劃網logo"
+        />
+        <h1>旅遊規劃網</h1>
+      </section>
+
+      <nav>
+        <ul>
+          <li><a href="#">規劃行程</a></li>
+          <li><a href="#">載入行程</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- 顯示旅遊計畫、時程表 -->
+      <section class="plan">
+        <!-- 新增行程表單 -->
+        <form class="init-form" action="">
+
+          <div class="browsing-history">
+            <label for="browsing-history">搜尋紀錄：</label>
+            <input id="browsing-history" type="text" name="browsing-history" />
+          </div>
+
+          
+          <div class="departure-date">
+            <label for="departure-date">出發日期：</label>
+            <input
+              id="departure-date"
+              type="date"
+              name="departure-date"
+              required
+            />
+          </div>
+          
+
+          <div class="trip-name">
+            <label for="trip-name">行程名稱：</label>
+            <input id="trip-name" type="text" name="trip-name" />
+          </div>
+          
+          <button>創建旅程</button>
+        </form>
+
+        <!-- 行程表 -->
+        <div class="schedule">
+          
+          <div class="browsing-history">
+            <p><label for="browsing-history">搜尋紀錄：</label></p>
+            <!--
+            <input id="browsing-history" type="text" name="browsing-history" />
+            
+            <div class="plus-btn">
+            <p>+</p>
+            </div>
+            -->
+            <!--<form name="表單" method="get" action="https://www.youtube.com/watch?">-->
+           <select id="browsing-history">
+                <option value="">請選擇瀏覽紀錄</option>
+              <optgroup label="日本">
+                <option value="-rTDnQ4bmOg"> 河口湖円形ホール </option>
+                <option value="rBwmk2zzIy8"> 大石公園 </option>       
+                <option value="s8MKF5o6lco"> 河口湖 富士山パノラマロープウェイ </option>        
+                <option value="k-7c95M6zSU"> 河口湖遊覧船 天晴 </option>        
+                <option value="O8RFO3AHLZQ"> 河口湖オルゴールの森美術館 </option>       
+                <option value="3tUGFb_XswY"> 久保田一竹美術館 </option>
+                <option value="L5ZMIcInlOU"> 富士急ハイランド </option>
+                <option value="wJNHRweW5WE"> 北口本宮冨士淺間神社 </option>
+              </optgroup>
+           </select>
+           <!--</form>-->
+
+            <div class="plus-btn">
+            <p>+</p>
+            </div>
+
+          </div>
+          
+          <!-- 上方日期選單 -->
+          <div class="day-bar">
+            <div class="day day1">
+              <p id="date">1/25</p>
+              <p id="day-num">Day1</p>
+            </div>
+
+            <div class="plus-btn">
+              <p>+</p>
+            </div>
+
+            <div class="save-btn">
+              <p>儲存</p>
+            </div>
+          </div>
+
+          <!-- 下方每日行程表 -->
+          <div class="daily-schedule day1">
+            <!-- <div class="schedule-plate id-1">
+              <div class="time-and-tourist-spot start-or-end">
+                <img
+                  class="place"
+                  src="../icon/place2.png"
+                  alt="place-marker"
+                />
+
+                <div class="time">
+                  <p class="start-or-end-time">09:00</p>
+                  <p class="action">出發</p>
+                </div>
+
+                <div class="tourist-spot">
+                  <p class="spot">網走車站</p>
+                </div>
+
+                <div class="remove-btn">
+                  <i class="bi bi-trash"></i>
+                </div>
+
+                <div class="drag-btn">
+                  <i class="bi bi-arrows-move"></i>
+                </div>
+              </div>
+
+              <div class="traffic-time id-1">
+                <i class="bi bi-car-front-fill"></i>
+                <p>7 分鐘</p>
+              </div>
+            </div>
+
+            <div class="schedule-plate id-2">
+              <div class="time-and-tourist-spot traveling">
+                <img
+                  class="place"
+                  src="../icon/place2.png"
+                  alt="place-marker"
+                />
+
+                <div class="time">
+                  <p class="start-time">09:10</p>
+                  <p class="to">-</p>
+                  <p class="end-time">13:00</p>
+                </div>
+
+                <div class="tourist-spot">
+                  <p class="spot">網走監獄</p>
+                  <p class="stay-time">停留4hr</p>
+                  <p class="cost">花費1500</p>
+                </div>
+
+                <div class="remove-btn">
+                  <i class="bi bi-trash"></i>
+                </div>
+
+                <div class="drag-btn">
+                  <i class="bi bi-arrows-move"></i>
+                </div>
+              </div>
+            </div> -->
+          </div>
+        </div>
+      </section>
+
+      <!-- 顯示地圖 -->
+      <section class="map">
+        <div id="cover">
+          <p>請先從左側創建旅程</p>
+        </div>
+
+        <div id="search-box">
+          <div id="title">新增行程</div>
+          <input
+            id="pac-input"
+            class="controls"
+            type="text"
+            placeholder="請在此輸入地點"
+          />
+        </div>
+
+        <div id="map"></div>
+
+        <!-- Place detail and add button -->
+        <div id="infowindow-content">
+          <div id="place-name" class="title"></div>
+          <div id="place-address"></div>
+          <!-- 加入行程/已加入，default不顯示 -->
+          <div class="add-place">
+            <p id="add-place" style="display: none">加入行程</p>
+            <p id="added" style="display: none">已加入</p>
+          </div>
+          <!-- 新增行程表單，default不顯示 -->
+          <form class="add-place-form" action="">
+            <div class="fill-in-start-time" style="display: none">
+              <label for="start-time">出發時間：</label>
+              <input id="start-time" type="time" timeformat="24h" required />
+            </div>
+            <div class="fill-in-duration" style="display: none">
+              <p>停留時間：</p>
+              <input
+                id="duration-hr"
+                type="number"
+                min="0"
+                max="23"
+                step="1"
+                value="0"
+                required
+              />
+              <label for="duration-hr">小時</label>
+              <input
+                id="duration-min"
+                type="number"
+                min="0"
+                max="59"
+                step="1"
+                value="0"
+                required
+              />
+              <label for="duration-min">分鐘 </label>
+            </div>
+            <button class="conform-add" style="display: none">確認新增</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- Load the map script with API key dynamically -->
+    <script type="module">
+      import MAP_API_KEY from "../app/apiKey.js";
+
+      // Create a script element and set its src attribute dynamically
+      const script = document.createElement("script");
+      script.src = `https://maps.googleapis.com/maps/api/js?key=${MAP_API_KEY}&callback=initMap&libraries=places&v=weekly`;
+      script.defer = true;
+      // script.async = true;
+
+      // Append the script element to the HTML body
+      document.body.appendChild(script);
+    </script>
+
+    <script type="module" src="../app/app.js"></script>
+
+    <!-- Test line -->
+  </body>
+</html>

@@ -1,0 +1,315 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+header *,
+section.plan {
+  background-color: rgb(40, 40, 40);
+  color: white;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+
+header {
+  height: 12vh;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 30px;
+  background-color: rgb(71, 71, 71);
+}
+header section.logo {
+  background-color: rgb(71, 71, 71);
+  flex: 5 1 250px;
+  display: flex;
+  align-items: center;
+}
+header section.logo img {
+  background-color: rgb(71, 71, 71);
+  width: 6vw;
+  height: 6vh;
+}
+header section.logo h1 {
+  background-color: rgb(71, 71, 71);
+  font-size: 2.5rem;
+}
+header nav {
+  background-color: rgb(71, 71, 71);
+  flex: 1 1 240px;
+}
+header nav ul {
+  background-color: rgb(71, 71, 71);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+}
+header nav ul li {
+  background-color: rgb(71, 71, 71);
+  flex-basis: 120px;
+  list-style-type: none;
+}
+header nav ul li a {
+  background-color: rgb(71, 71, 71);
+  text-decoration: none;
+  font-size: 1.35rem;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  height: 88vh;
+}
+main section.plan {
+  flex: 1 1 400px;
+}
+main section.plan form {
+  height: 300px;
+  padding: 1rem;
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+main section.plan form div.browsing-history input {
+  width: 8rem;
+}
+
+main section.plan form div.departure-date input {
+  width: 8rem;
+}
+main section.plan form div.trip-name input {
+  width: 8rem;
+}
+main section.plan form button {
+  padding: 0.5rem;
+}
+main section.plan form button:hover {
+  cursor: pointer;
+}
+
+main section.plan div.schedule {
+  padding: 1rem;
+  margin: 1rem;
+}
+
+main section.plan div.schedule div.browsing-history div.plus-btn{
+  width: 3rem;
+  background-color: rgb(0, 34, 255);
+  
+}
+main section.plan div.schedule div.browsing-history div.plus-btn p{
+  background-color: rgb(0, 34, 255);
+  font-size: 1rem;
+}
+main section.plan div.schedule div.browsing-history div.plus-btn p{
+  font-size: 1.5rem;
+}
+main section.plan div.schedule div.browsing-history input{
+  padding: 0.7em 0.5em 0.5em;
+  margin: 0rem;
+  /*display: inline;*/
+}
+
+main section.plan div.schedule div.browsing-history select{
+  padding: 0.7em 0.5em 0.5em;
+  margin: 0rem;
+  font-size: 0.85rem;
+  /*display: inline;*/
+}
+
+main section.plan div.schedule div.browsing-history div {
+  width: 10rem;
+  border: 1px solid white;
+  /*padding-top: 0.5;*/
+  padding: 0.5em 0.5em 0.5em ;
+  display: inline;
+  flex-direction: row;
+  justify-content: center;
+}
+main section.plan div.schedule div.browsing-history div p {
+  text-align: center;
+  display: inline;
+}
+main section.plan div.schedule div.browsing-history div:hover {
+  cursor: pointer;
+}
+
+main section.plan div.schedule div.day-bar {
+  padding: 0rem;
+  margin: 1rem;
+  display: flex;
+}
+main section.plan div.schedule div.day-bar div {
+  width: 4rem;
+  border: 1px solid white;
+  padding: 0.5rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+main section.plan div.schedule div.day-bar div p {
+  text-align: center;
+}
+main section.plan div.schedule div.day-bar div:hover {
+  cursor: pointer;
+}
+main section.plan div.schedule div.day-bar div.plus-btn,
+main section.plan div.schedule div.day-bar div.save-btn {
+  width: 3rem;
+  background-color: rgb(0, 34, 255);
+}
+main section.plan div.schedule div.day-bar div.plus-btn p,
+main section.plan div.schedule div.day-bar div.save-btn p {
+  background-color: rgb(0, 34, 255);
+  font-size: 1rem;
+}
+main section.plan div.schedule div.day-bar div.plus-btn p {
+  font-size: 1.5rem;
+}
+main section.plan div.schedule div.daily-schedule div.schedule-plate div.time-and-tourist-spot {
+  padding: 0.5rem 0rem;
+  border: 1px solid white;
+  margin: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+main section.plan div.schedule div.daily-schedule div.schedule-plate div.time-and-tourist-spot img.place {
+  flex: 0 0 1.5rem;
+  height: 1.5rem;
+  margin: 0.5rem 1rem;
+}
+main section.plan div.schedule div.daily-schedule div.schedule-plate div.time-and-tourist-spot div.time {
+  flex: 0 0 8rem;
+  display: flex;
+  align-items: center;
+}
+main section.plan div.schedule div.daily-schedule div.schedule-plate div.time-and-tourist-spot div.time p {
+  font-size: 1.2rem;
+}
+main section.plan div.schedule div.daily-schedule div.schedule-plate div.time-and-tourist-spot div.tourist-spot {
+  flex: 4 1 16rem;
+}
+main section.plan div.schedule div.daily-schedule div.schedule-plate div.time-and-tourist-spot div.tourist-spot p.spot {
+  font-size: 1.2rem;
+}
+main section.plan div.schedule div.daily-schedule div.schedule-plate div.time-and-tourist-spot div.tourist-spot p.stay-time,
+main section.plan div.schedule div.daily-schedule div.schedule-plate div.time-and-tourist-spot div.tourist-spot p.cost {
+  font-size: 0.8rem;
+}
+main section.plan div.schedule div.daily-schedule div.schedule-plate div.time-and-tourist-spot div.remove-btn,
+main section.plan div.schedule div.daily-schedule div.schedule-plate div.time-and-tourist-spot div.drag-btn {
+  width: 2rem;
+  height: 2rem;
+  margin: 0.3rem;
+  border-radius: 0.2rem;
+  background-color: red;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main section.plan div.schedule div.daily-schedule div.schedule-plate div.time-and-tourist-spot div.remove-btn i,
+main section.plan div.schedule div.daily-schedule div.schedule-plate div.time-and-tourist-spot div.drag-btn i {
+  font-size: 1.2rem;
+  padding: 0.3rem;
+}
+main section.plan div.schedule div.daily-schedule div.schedule-plate div.time-and-tourist-spot div.drag-btn {
+  background-color: blue;
+}
+main section.plan div.schedule div.daily-schedule div.schedule-plate div.start-or-end div.time p.start-or-end-time {
+  width: 4rem;
+}
+main section.plan div.schedule div.daily-schedule div.schedule-plate div.start-or-end div.time p.action {
+  width: 3rem;
+}
+main section.plan div.schedule div.daily-schedule div.schedule-plate div.traveling div.time p.start-time,
+main section.plan div.schedule div.daily-schedule div.schedule-plate div.traveling div.time p.end-time {
+  width: 3rem;
+}
+main section.plan div.schedule div.daily-schedule div.schedule-plate div.traveling div.time p.to {
+  width: 1rem;
+  text-align: center;
+}
+main section.plan div.schedule div.daily-schedule div.schedule-plate div.traffic-time {
+  margin: 0 1rem;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+main section.plan div.schedule div.daily-schedule div.schedule-plate div.traffic-time i {
+  margin: 0 0.5rem;
+}
+main section.map {
+  flex: 2 1 400px;
+  position: relative;
+}
+main section.map #cover {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
+}
+main section.map #cover p {
+  font-size: 2rem;
+  text-align: center;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+main section.map #search-box {
+  width: max(400px, 30%);
+}
+main section.map #search-box #title {
+  background-color: rgb(0, 34, 255);
+  color: white;
+  font-size: 1.5rem;
+  width: 100%;
+  padding: 0.5rem;
+}
+main section.map #search-box #pac-input {
+  font-size: 1.2rem;
+  width: 100%;
+}
+main section.map #map {
+  height: 100%;
+  width: 100%;
+}
+main section.map #infowindow-content #place-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+main section.map #infowindow-content .add-place {
+  display: flex;
+}
+main section.map #infowindow-content .add-place #add-place {
+  justify-content: center;
+  margin: 0.6rem 0;
+  padding: 0.3rem;
+  background-color: rgb(0, 34, 255);
+  color: white;
+  font-size: 1.2rem;
+}
+main section.map #infowindow-content .add-place #add-place:hover {
+  cursor: pointer;
+}
+main section.map #infowindow-content .add-place #added {
+  color: green;
+  font-size: 1.2rem;
+}/*# sourceMappingURL=style.css.map */

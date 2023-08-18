@@ -1,0 +1,418 @@
+// Theme color for this website
+$themeColor: rgb(40, 40, 40);
+$headerColor: rgb(71, 71, 71);
+$textColor: white;
+$btnColor: rgb(0, 34, 255);
+
+$scheduleMargin: 1rem;
+
+@mixin center-align {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin btn {
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+// Set the theme and text color of the website
+header *,
+section.plan {
+  background-color: $themeColor;
+  color: $textColor;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+
+header {
+  height: 12vh;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center; // 垂直對齊
+
+  padding: 30px;
+  background-color: $headerColor;
+
+  section.logo {
+    background-color: $headerColor;
+
+    // flex item
+    flex: 5 1 250px;
+
+    // flex container
+    display: flex;
+    align-items: center;
+
+    img {
+      background-color: $headerColor;
+
+      width: 6vw;
+      height: 6vh;
+    }
+
+    h1 {
+      background-color: $headerColor;
+
+      font-size: 2.5rem;
+    }
+  }
+
+  nav {
+    background-color: $headerColor;
+    flex: 1 1 240px;
+
+    ul {
+      background-color: $headerColor;
+
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: left;
+
+      li {
+        background-color: $headerColor;
+
+        flex-basis: 120px;
+        list-style-type: none;
+
+        a {
+          background-color: $headerColor;
+
+          text-decoration: none;
+          font-size: 1.35rem;
+        }
+      }
+    }
+  }
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  height: 88vh;
+
+  section.plan {
+    flex: 1 1 400px;
+
+    // 新增行程表單
+
+    form {
+      height: 300px;
+      padding: 1rem;
+      margin: 1rem;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+
+      div.browsing-history {
+        input {
+          width: 8rem;
+        }
+      }
+
+      div.departure-date {
+        input {
+          width: 8rem;
+        }
+      }
+
+      div.trip-name {
+        input {
+          width: 8rem;
+        }
+      }
+
+      button {
+        padding: 0.5rem;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+
+    // 行程表
+    div.schedule {
+      padding: 1rem;
+      margin: 1rem;
+
+      div.browsing-history {
+        padding: 0rem;
+        margin: $scheduleMargin;
+        display: flex;
+
+        div {
+          width: 4rem;
+          border: 1px solid white;
+          padding: 0.5rem 0;
+
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+
+          p {
+            text-align: center;
+          }
+
+          &:hover {
+            cursor: pointer;
+          }
+        }
+        div.plus-btn{
+          width: 3rem;
+          p {
+            background-color: $btnColor;
+            font-size: 1rem;
+          }
+
+          background-color: $btnColor;
+        }
+
+        div.plus-btn {
+          p {
+            font-size: 1.5rem;
+          }
+        }
+
+      }
+      div.day-bar {
+        padding: 0rem;
+        margin: $scheduleMargin;
+        display: flex;
+
+        div {
+          width: 4rem;
+          border: 1px solid white;
+          padding: 0.5rem 0;
+
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+
+          p {
+            text-align: center;
+          }
+
+          &:hover {
+            cursor: pointer;
+          }
+        }
+
+        div.plus-btn,
+        div.save-btn {
+          width: 3rem;
+          p {
+            background-color: $btnColor;
+            font-size: 1rem;
+          }
+
+          background-color: $btnColor;
+        }
+
+        div.plus-btn {
+          p {
+            font-size: 1.5rem;
+          }
+        }
+      }
+
+      div.daily-schedule {
+        div.schedule-plate {
+          div.time-and-tourist-spot {
+            padding: 0.5rem 0rem;
+            border: 1px solid white;
+            margin: $scheduleMargin;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            img.place {
+              // width: 1.5rem;
+              flex: 0 0 1.5rem;
+              height: 1.5rem;
+
+              margin: 0.5rem 1rem;
+            }
+
+            div.time {
+              // width: 8rem;
+              flex: 0 0 8rem;
+              display: flex;
+              align-items: center;
+
+              p {
+                font-size: 1.2rem;
+              }
+            }
+
+            div.tourist-spot {
+              flex: 4 1 16rem;
+              p.spot {
+                font-size: 1.2rem;
+              }
+
+              p.stay-time,
+              p.cost {
+                font-size: 0.8rem;
+              }
+            }
+
+            div.remove-btn,
+            div.drag-btn {
+              // flex: 0 0 1.8rem;
+              width: 2rem;
+              height: 2rem;
+              margin: 0.3rem;
+              border-radius: 0.2rem;
+              background-color: red;
+              cursor: pointer;
+
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              i {
+                font-size: 1.2rem;
+                padding: 0.3rem;
+              }
+            }
+
+            div.drag-btn {
+              background-color: blue;
+            }
+          }
+
+          div.start-or-end {
+            div.time {
+              p.start-or-end-time {
+                width: 4rem;
+              }
+
+              p.action {
+                width: 3rem;
+              }
+            }
+          }
+
+          div.traveling {
+            div.time {
+              p.start-time,
+              p.end-time {
+                width: 3rem;
+              }
+
+              p.to {
+                width: 1rem;
+                text-align: center;
+              }
+            }
+          }
+
+          div.traffic-time {
+            margin: 0 1rem;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            justify-content: right;
+
+            i {
+              margin: 0 0.5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  section.map {
+    flex: 2 1 400px;
+    position: relative;
+
+    #cover {
+      height: 100%;
+      width: 100%;
+      background-color: rgba(255, 255, 255, 0.8);
+
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 5;
+
+      p {
+        font-size: 2rem;
+        text-align: center;
+        @include center-align();
+      }
+    }
+
+    #search-box {
+      width: max(400px, 30%);
+
+      #title {
+        background-color: $btnColor;
+        color: $textColor;
+        font-size: 1.5rem;
+        width: 100%;
+        padding: 0.5rem;
+      }
+
+      #pac-input {
+        font-size: 1.2rem;
+        width: 100%;
+        // margin: 0.5rem;
+        // padding: 0 0.5rem;
+      }
+    }
+
+    #map {
+      height: 100%;
+      width: 100%;
+    }
+
+    #infowindow-content {
+      #place-name {
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
+
+      .add-place {
+        display: flex;
+
+        #add-place {
+          justify-content: center;
+          margin: 0.6rem 0;
+          padding: 0.3rem;
+          background-color: $btnColor;
+          color: $textColor;
+          font-size: 1.2rem;
+
+          @include btn();
+        }
+
+        #added {
+          color: green;
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+}
